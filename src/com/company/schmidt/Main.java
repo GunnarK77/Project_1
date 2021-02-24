@@ -11,6 +11,7 @@ public class Main {
 
             menu();
             int choices = input.nextInt();
+            input.nextLine();
 
             switch (choices) {
                 case 1://add a task
@@ -28,6 +29,7 @@ public class Main {
                     listTask(task);
                     System.out.println("Please enter the number of the task you would want to update");
                     i = input.nextInt();
+                    input.nextLine();
                     System.out.println("Enter what you want the task to say");
                     a = input.next();
                     updateTask(task,i,a);
