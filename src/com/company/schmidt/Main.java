@@ -16,13 +16,14 @@ public class Main {
             switch (choices) {
                 case 1://add a task
                     System.out.println("Please enter a description of the task");
-                    String a = input.next();
+                    String a = input.nextLine();
                     addTask(task, a);
                     break;
                 case 2://delete a task
                     System.out.println("Enter the number of the task you would like to delete in the list");
                     listTask(task);
                     int i = input.nextInt();
+                    input.nextLine();
                     deleteTask(task,i);
                     break;
                 case 3://update
@@ -31,7 +32,7 @@ public class Main {
                     i = input.nextInt();
                     input.nextLine();
                     System.out.println("Enter what you want the task to say");
-                    a = input.next();
+                    a = input.nextLine();
                     updateTask(task,i,a);
                     break;
                 case 4://list out tasks
@@ -59,7 +60,7 @@ public class Main {
     }
 
     public static void deleteTask(ArrayList<String> task, int del) {
-        task.remove(del -1);
+        task.remove(del);
     }
 
     public static void listTask(ArrayList<String> task) {
